@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Estilos globales personalizados */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-gray-50;
+}
+
+/* Títulos con soporte para caracteres especiales */
+h1, h2, h3, h4, h5, h6 {
+  @apply font-sans;
+  font-feature-settings: 'kern' 1;
+}
+
+/* Links */
+a {
+  @apply text-blue-600 hover:text-blue-700 transition-colors;
+}
+
+/* Botones base */
+button {
+  @apply transition-colors;
+}
+
+/* Contenedor principal */
+.container {
+  @apply max-w-7xl mx-auto;
+}
+
+/* Cards */
+.card {
+  @apply bg-white rounded-lg shadow-md p-4;
+}
+
+/* Gradientes personalizados */
+.gradient-blue-green {
+  background: linear-gradient(135deg, #0ea5e9 0%, #10b981 100%);
+}
+
+.gradient-purple-pink {
+  background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Estilos para componentes Plotly */
+.js-plotly-plot {
+  @apply rounded-lg overflow-hidden;
+}
+
+.plotly svg {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* Responsive grid */
+@media (max-width: 768px) {
+  .grid-responsive {
+    @apply grid-cols-1;
+  }
+}
+
+@media (min-width: 769px) {
+  .grid-responsive {
+    @apply grid-cols-2;
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid-responsive {
+    @apply grid-cols-4;
+  }
+}
