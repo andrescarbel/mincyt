@@ -1,3 +1,5 @@
+import { useRouter } from 'next/router';
+
 export default function Cap3Page() {
   const powerBiToken = 'eyJrIjoiOWQ3MjJlN2QtNWJlMS00NGIzLWJjZmUtMmY4MGVhM2NlMDFmIiwidCI6ImYyMTMzNGIwLTc1ZGUtNDY0MS04ZTU5LTNjMGU1YTdhYjc1MyIsImMiOjR9';
 
@@ -5,7 +7,7 @@ export default function Cap3Page() {
     {
       number: '3.1',
       type: 'image',
-      src: '/mincyt/public/Grafico_3_1.jpg',
+      src: '/Grafico_3_1.jpg',
       title: 'Esquema general de instrumentos de promoción orientada CTI gestionados por el MINCyT a través de la Agencia y otras dependencias (2008-2023)',
       note: 'Elaboración propia.'
     },
@@ -59,17 +61,11 @@ export default function Cap3Page() {
     }
   ];
 
-  const handleBack = () => {
-    window.location.href = '/mincyt';
-  };
+  const router = useRouter();
 
-  const handlePrev = () => {
-    window.location.href = '/mincyt/cap2';
-  };
-
-  const handleNext = () => {
-    window.location.href = '/mincyt/cap4';
-  };
+  const handleBack = () => router.push('/');
+  const handlePrev = () => router.push('/cap2');
+  const handleNext = () => router.push('/cap4');
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-green-50 to-white">
@@ -111,7 +107,7 @@ export default function Cap3Page() {
                 {chart.type === 'image' ? (
                   <div className="relative w-full rounded-lg overflow-hidden bg-gray-100">
                     <img
-                      src={chart.src}
+                      src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}${chart.src}`}
                       alt={`Gráfico ${chart.number}`}
                       className="w-full h-auto"
                       onError={(e) => {

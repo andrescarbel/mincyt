@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useRouter } from 'next/router';
 
 export default function Cap4Page() {
   const [kumuLoaded, setKumuLoaded] = useState({});
@@ -9,259 +10,49 @@ export default function Cap4Page() {
   };
 
   const charts = [
-    // Gráfico 4.1
-    {
-      number: '4.1',
-      type: 'powerbi',
-      reportSectionId: 'ReportSectiondc91e121b25772ecb6ac',
-      token: powerBiToken,
-      title: 'Gráfico 4.1. Panel de proyectos adjudicados de la base de datos, por sendero asociativo y fondo (2004-2023)',
-      note: '4.1a: Suma de proyectos adjudicados por sendero asociativo y fondo. 4.1b: Adjudicación anual de proyectos por sendero asociativo y fondo. Elaboración propia con datos de la base de datos de proyectos adjudicados.'
-    },
-    // Gráfico 4.2
-    {
-      number: '4.2',
-      type: 'powerbi',
-      reportSectionId: 'ReportSection8015f23c4c671a3d2313',
-      token: powerBiToken,
-      title: 'Gráfico 4.2. Participación relativa por área temática y mandato presidencial de las adjudicaciones financieras de Asociatividad Público-Privada (2008-2023)',
-      note: 'Elaboración propia con datos de la base de datos de proyectos adjudicados.'
-    },
-    // Gráfico 4.3
-    {
-      number: '4.3',
-      type: 'powerbi',
-      reportSectionId: 'ReportSection6626421ad5dd9ce5959e',
-      token: powerBiToken,
-      title: 'Gráfico 4.3. Proyectos adjudicados de Asociatividad Público-Privada por mandato presidencial y tamaño de consorcio asociativo (2008-2023)',
-      note: 'Elaboración propia con datos de la base de proyectos adjudicados.'
-    },
-    // Gráfico 4.4 - Kumu
-    {
-      number: '4.4',
-      type: 'kumu',
-      src: 'https://embed.kumu.io/76494c0b79f0b9c0f297937a447f55ae',
-      title: 'Gráfico 4.4. Red de Asociatividad Público-Privada (2008-2023)',
-      note: 'Elaboración propia con datos de la base de datos de proyectos adjudicados. Visualización interactiva disponible en: https://kumu.io/andcar/pruebasadj#fon5/fon5tam'
-    },
-    // Gráfico 4.5 - Imagen
-    {
-      number: '4.5',
-      type: 'image',
-      src: '/mincyt/public/cap4_images/chart_4_5.png',
-      title: 'Gráfico 4.5. Red de Asociatividad Público-Privada, destacadas organizaciones estatales y privadas (2008-2023)',
-      note: '4.5a: Entidades estatales destacadas. 4.5b: Entidades privadas destacadas. Elaboración propia con datos de la base de datos de proyectos adjudicados. Visualización interactiva disponible en: https://kumu.io/andcar/pruebasadj#fon5/fon5tam'
-    },
-    // Gráfico 4.6 - Imagen
-    {
-      number: '4.6',
-      type: 'image',
-      src: '/mincyt/public/cap4_images/chart_4_6.png',
-      title: 'Gráfico 4.6. Red de Asociatividad Público-Privada destacada por adjudicación durante cada mandato presidencial (2008-2015)',
-      note: '4.6a: Adjudicaciones 2008-2011. 4.6b: Adjudicaciones 2012-2015. Elaboración propia con datos de la base de datos de proyectos adjudicados. Visualización interactiva disponible en: https://kumu.io/andcar/pruebasadj#fon5/fon5tam'
-    },
-    // Gráfico 4.7 - Imagen
-    {
-      number: '4.7',
-      type: 'image',
-      src: '/mincyt/public/cap4_images/chart_4_7.png',
-      title: 'Gráfico 4.7. Red de Asociatividad Público-Privada destacada por adjudicación durante cada mandato presidencial (2016-2023)',
-      note: '4.7a: Adjudicaciones 2016-2019. 4.7b: Adjudicaciones 2020-2023. Elaboración propia con datos de la base de datos de proyectos adjudicados. Visualización interactiva disponible en: https://kumu.io/andcar/pruebasadj#fon5/fon5tam'
-    },
-    // Gráfico 4.8 - Imagen
-    {
-      number: '4.8',
-      type: 'image',
-      src: '/mincyt/public/cap4_images/chart_4_8.png',
-      title: 'Gráfico 4.8. Red de Asociatividad Público-Privada destacada por área temática (2008-2023)',
-      note: 'Elaboración propia con datos de la base de datos de proyectos adjudicados. Visualización interactiva disponible en: https://kumu.io/andcar/pruebasadj#fon5/fon5tam'
-    },
-    // Gráfico 4.9
-    {
-      number: '4.9',
-      type: 'powerbi',
-      reportSectionId: 'ReportSection585659f61d00494439c7',
-      token: powerBiToken,
-      title: 'Gráfico 4.9. Panel de participación relativa en adjudicaciones por instrumento de Articulación de la Demanda Estatal (2008-2023)',
-      note: '4.9a: Cantidad de proyectos adjudicados por instrumento. 4.9b: Participación relativa sobre adjudicaciones financieras por instrumento y mandato presidencial. Elaboración propia con datos de la base de proyectos adjudicados.'
-    },
-    // Gráfico 4.10
-    {
-      number: '4.10',
-      type: 'powerbi',
-      reportSectionId: 'ReportSection9f787217514b282413c9',
-      token: powerBiToken,
-      title: 'Gráfico 4.10. Participación relativa de áreas temáticas e instrumentos en las adjudicaciones financieras de Articulación de la Demanda Estatal (2008-2023)',
-      note: 'Elaboración propia con datos de la base de proyectos adjudicados.'
-    },
-    // Gráfico 4.11
-    {
-      number: '4.11',
-      type: 'powerbi',
-      reportSectionId: 'ReportSection12a998e0d90573e3ddd6',
-      token: powerBiToken,
-      title: 'Gráfico 4.11. Consorcios conformados por la red de Articulación de la Demanda Estatal (por año y tipo de consorcio, 2008-2023)',
-      note: 'Elaboración propia con datos de la base de proyectos adjudicados.'
-    },
-    // Gráfico 4.12 - Kumu
-    {
-      number: '4.12',
-      type: 'kumu',
-      src: 'https://embed.kumu.io/7b061058b05781d14b86e0384a471769',
-      title: 'Gráfico 4.12. Red de Articulación de la Demanda Estatal (2008-2023)',
-      note: 'Elaboración propia con datos de la base de datos de proyectos adjudicados. Visualización interactiva disponible en: https://kumu.io/andcar/pruebasadj#est5'
-    },
-    // Gráfico 4.13 - Imagen
-    {
-      number: '4.13',
-      type: 'image',
-      src: '/mincyt/public/cap4_images/chart_4_13.png',
-      title: 'Gráfico 4.13. Red de Articulación de la Demanda Estatal destacada por adjudicación durante cada mandato presidencial (2008-2015)',
-      note: '4.13a: Adjudicaciones 2008-2011. 4.13b: Adjudicaciones 2012-2015. Elaboración propia con datos de la base de datos de proyectos adjudicados. Visualización interactiva disponible en: https://kumu.io/andcar/pruebasadj#est5'
-    },
-    // Gráfico 4.14 - Imagen
-    {
-      number: '4.14',
-      type: 'image',
-      src: '/mincyt/public/cap4_images/chart_4_14.png',
-      title: 'Gráfico 4.14. Red de Articulación de la Demanda Estatal destacada por adjudicación durante cada mandato presidencial (2016-2023)',
-      note: '4.14a: Adjudicaciones 2016-2019. 4.14b: Adjudicaciones 2020-2023. Elaboración propia con datos de la base de datos de proyectos adjudicados. Visualización interactiva disponible en: https://kumu.io/andcar/pruebasadj#est5'
-    },
-    // Gráfico 4.15 - Imagen
-    {
-      number: '4.15',
-      type: 'image',
-      src: '/mincyt/public/cap4_images/chart_4_15.png',
-      title: 'Gráfico 4.15. Red de Articulación de la Demanda Estatal destacada por instrumentos adjudicados, paradigma poscompetitivo (2008-2023)',
-      note: 'Elaboración propia con datos de la base de datos de proyectos adjudicados. Visualización interactiva disponible en: https://kumu.io/andcar/pruebasadj#est5'
-    },
-    // Gráfico 4.16 - Imagen
-    {
-      number: '4.16',
-      type: 'image',
-      src: '/mincyt/public/cap4_images/chart_4_16.png',
-      title: 'Gráfico 4.16. Red de Articulación de la Demanda Estatal destacada por instrumentos adjudicados, paradigma competitivo (2008-2023)',
-      note: 'Elaboración propia con datos de la base de datos de proyectos adjudicados. Visualización interactiva disponible en: https://kumu.io/andcar/pruebasadj#est5'
-    },
-    // Gráfico 4.17
-    {
-      number: '4.17',
-      type: 'powerbi',
-      reportSectionId: 'ReportSection4fe984c4490c891355e2',
-      token: powerBiToken,
-      title: 'Gráfico 4.17. Panel de participación relativa en adjudicaciones por instrumento',
-      note: '4.17a: Cantidad de proyectos adjudicados por instrumento. 4.17b: Participación anual relativa sobre adjudicaciones financieras por instrumento (a valores constantes de 2008). Elaboración propia con datos de la base de proyectos adjudicados.'
-    },
-    // Gráfico 4.18
-    {
-      number: '4.18',
-      type: 'powerbi',
-      reportSectionId: 'ReportSection6d4fee2125dbb9c0dc0d',
-      token: powerBiToken,
-      title: 'Gráfico 4.18. Participación relativa por área temática y mandato presidencial de las adjudicaciones financieras de Innovación comunitaria y socioinclusiva (2008-2023)',
-      note: 'Elaboración propia con datos de la base de proyectos adjudicados.'
-    },
-    // Gráfico 4.19
-    {
-      number: '4.19',
-      type: 'powerbi',
-      reportSectionId: 'ReportSection07a1a9387185d0b8bb90',
-      token: powerBiToken,
-      title: 'Gráfico 4.19. Consorcios conformados por la red de Innovación Comunitaria y Socioinclusiva (2008-2023)',
-      note: 'Elaboración propia con datos de la base de proyectos adjudicados.'
-    },
-    // Gráfico 4.20 - Kumu
-    {
-      number: '4.20',
-      type: 'kumu',
-      src: 'https://embed.kumu.io/9c446cc4ec0c44452a6038e77a328594',
-      title: 'Gráfico 4.20. Red de Innovación Comunitaria y Socioinclusiva (2008-2023)',
-      note: 'Elaboración propia con datos de la base de datos de proyectos adjudicados. Visualización interactiva disponible en: https://kumu.io/andcar/pruebasadj#com5'
-    },
-    // Gráfico 4.21 - Imagen
-    {
-      number: '4.21',
-      type: 'image',
-      src: '/mincyt/public/cap4_images/chart_4_21.png',
-      title: 'Gráfico 4.21. Red de Innovación Comunitaria y Socioinclusiva destacada por adjudicación durante cada mandato presidencial (2008-2015)',
-      note: '4.21a: Adjudicaciones 2008-2011. 4.21b: Adjudicaciones 2012-2015. Elaboración propia con datos de la base de datos de proyectos adjudicados. Visualización interactiva disponible en: https://kumu.io/andcar/pruebasadj#com5'
-    },
-    // Gráfico 4.22 - Imagen
-    {
-      number: '4.22',
-      type: 'image',
-      src: '/mincyt/public/cap4_images/chart_4_22.png',
-      title: 'Gráfico 4.22. Red de Innovación Comunitaria y Socioinclusiva destacada por adjudicación durante cada mandato presidencial (2016-2023)',
-      note: '4.22a: Adjudicaciones 2016-2019. 4.22b: Adjudicaciones 2020-2023. Elaboración propia con datos de la base de datos de proyectos adjudicados. Visualización interactiva disponible en: https://kumu.io/andcar/pruebasadj#com5'
-    },
-    // Gráfico 4.23 - Imagen
-    {
-      number: '4.23',
-      type: 'image',
-      src: '/mincyt/public/cap4_images/chart_4_23.png',
-      title: 'Gráfico 4.23. Red de Innovación Comunitaria y Socioinclusiva destacada por área temática (Desarrollo productivo; Ambiente y hábitat social, 2008-2023)',
-      note: 'Elaboración propia con datos de la base de datos de proyectos adjudicados. Visualización interactiva disponible en: https://kumu.io/andcar/pruebasadj#com5'
-    },
-    // Gráfico 4.24 - Imagen
-    {
-      number: '4.24',
-      type: 'image',
-      src: '/mincyt/public/cap4_images/chart_4_24.png',
-      title: 'Gráfico 4.24. Red de Innovación Comunitaria y Socioinclusiva destacada por área temática (Agricultura familiar; Salud y discapacidad, 2008-2023)',
-      note: 'Elaboración propia con datos de la base de datos de proyectos adjudicados. Visualización interactiva disponible en: https://kumu.io/andcar/pruebasadj#com5'
-    },
-    // Gráfico 4.25
-    {
-      number: '4.25',
-      type: 'powerbi',
-      reportSectionId: 'ReportSection6860188c54a4e0dfe36d',
-      token: powerBiToken,
-      title: 'Gráfico 4.25. Participación porcentual sobre montos financieros adjudicados a entidades comunitarias, por tipo de entidad y fondo (2008-2023)',
-      note: 'Elaboración propia con datos de la base de proyectos adjudicados. *Estimación en base a la cantidad de entidades involucradas por cada consorcio asociativo. Para más detalles, ver anexo técnico-metodológico.'
-    },
-    // Gráfico 4.26
-    {
-      number: '4.26',
-      type: 'powerbi',
-      reportSectionId: 'ReportSection293595c62379bce0c066',
-      token: powerBiToken,
-      title: 'Gráfico 4.26. Participación porcentual sobre montos financieros adjudicados a entidades públicas, por tipo de entidad y fondo (2008-2023)',
-      note: 'Elaboración propia con datos de la base de proyectos adjudicados. *Estimación en base a la cantidad de entidades involucradas por cada consorcio asociativo. Para más detalles, ver anexo técnico-metodológico.'
-    },
-    // Gráfico 4.27
-    {
-      number: '4.27',
-      type: 'powerbi',
-      reportSectionId: 'ReportSection001ffbba49bf8f26b4a6',
-      token: powerBiToken,
-      title: 'Gráfico 4.27. Panel de consorcios asociativos por tamaño, según cantidad de proyectos y de montos financieros adjudicados (2008-2023)',
-      note: '4.27a: Cantidad de proyectos adjudicados por tipo de consorcio y cantidad de integrantes. 4.27b: Adjudicaciones financieras por tipo de consorcio y cantidad de integrantes (a valores constantes de 2008). Elaboración propia con datos de la base de proyectos adjudicados.'
-    },
-    // Gráfico 4.28 - Kumu
-    {
-      number: '4.28',
-      type: 'kumu',
-      src: 'https://embed.kumu.io/bb00d433a92811344ab0f3b452da18cf',
-      title: 'Gráfico 4.28. Red común a los tres senderos asociativos (2008-2023)',
-      note: 'Elaboración propia con datos de la base de datos de proyectos adjudicados. Visualización interactiva disponible en: https://kumu.io/andcar/pruebasadj#tot5'
-    },
-    // Gráfico 4.29 - Kumu
-    {
-      number: '4.29',
-      type: 'kumu',
-      src: 'https://embed.kumu.io/fb536029938812d272deb2af93f57fed',
-      title: 'Gráfico 4.29. Red común a los tres senderos asociativos, por comunidad (2008-2023)',
-      note: 'Elaboración propia con datos de la base de datos de proyectos adjudicados. Visualización interactiva disponible en: https://kumu.io/andcar/pruebasadj#tot5/colorcom'
-    }
+    { number: '4.1', type: 'powerbi', reportSectionId: 'ReportSectiondc91e121b25772ecb6ac', token: powerBiToken, title: 'Gráfico 4.1. Panel de proyectos adjudicados de la base de datos, por sendero asociativo y fondo (2004-2023)', note: '4.1a: Suma de proyectos adjudicados por sendero asociativo y fondo. 4.1b: Adjudicación anual de proyectos por sendero asociativo y fondo. Elaboración propia con datos de la base de datos de proyectos adjudicados.' },
+    { number: '4.2', type: 'powerbi', reportSectionId: 'ReportSection8015f23c4c671a3d2313', token: powerBiToken, title: 'Gráfico 4.2. Participación relativa por área temática y mandato presidencial de las adjudicaciones financieras de Asociatividad Público-Privada (2008-2023)', note: 'Elaboración propia con datos de la base de datos de proyectos adjudicados.' },
+    { number: '4.3', type: 'powerbi', reportSectionId: 'ReportSection6626421ad5dd9ce5959e', token: powerBiToken, title: 'Gráfico 4.3. Proyectos adjudicados de Asociatividad Público-Privada por mandato presidencial y tamaño de consorcio asociativo (2008-2023)', note: 'Elaboración propia con datos de la base de proyectos adjudicados.' },
+    { number: '4.4', type: 'kumu', src: 'https://embed.kumu.io/76494c0b79f0b9c0f297937a447f55ae', title: 'Gráfico 4.4. Red de Asociatividad Público-Privada (2008-2023)', note: 'Elaboración propia con datos de la base de datos de proyectos adjudicados. Visualización interactiva disponible en: https://kumu.io/andcar/pruebasadj#fon5/fon5tam' },
+    { number: '4.5', type: 'image', src: '/cap4_images/chart_4_5.png', title: 'Gráfico 4.5. Red de Asociatividad Público-Privada, destacadas organizaciones estatales y privadas (2008-2023)', note: '4.5a: Entidades estatales destacadas. 4.5b: Entidades privadas destacadas. Elaboración propia con datos de la base de datos de proyectos adjudicados. Visualización interactiva disponible en: https://kumu.io/andcar/pruebasadj#fon5/fon5tam' },
+    { number: '4.6', type: 'image', src: '/cap4_images/chart_4_6.png', title: 'Gráfico 4.6. Red de Asociatividad Público-Privada destacada por adjudicación durante cada mandato presidencial (2008-2015)', note: '4.6a: Adjudicaciones 2008-2011. 4.6b: Adjudicaciones 2012-2015. Elaboración propia con datos de la base de datos de proyectos adjudicados. Visualización interactiva disponible en: https://kumu.io/andcar/pruebasadj#fon5/fon5tam' },
+    { number: '4.7', type: 'image', src: '/cap4_images/chart_4_7.png', title: 'Gráfico 4.7. Red de Asociatividad Público-Privada destacada por adjudicación durante cada mandato presidencial (2016-2023)', note: '4.7a: Adjudicaciones 2016-2019. 4.7b: Adjudicaciones 2020-2023. Elaboración propia con datos de la base de datos de proyectos adjudicados. Visualización interactiva disponible en: https://kumu.io/andcar/pruebasadj#fon5/fon5tam' },
+    { number: '4.8', type: 'image', src: '/cap4_images/chart_4_8.png', title: 'Gráfico 4.8. Red de Asociatividad Público-Privada destacada por área temática (2008-2023)', note: 'Elaboración propia con datos de la base de datos de proyectos adjudicados. Visualización interactiva disponible en: https://kumu.io/andcar/pruebasadj#fon5/fon5tam' },
+    { number: '4.9', type: 'powerbi', reportSectionId: 'ReportSection585659f61d00494439c7', token: powerBiToken, title: 'Gráfico 4.9. Panel de participación relativa en adjudicaciones por instrumento de Articulación de la Demanda Estatal (2008-2023)', note: '4.9a: Cantidad de proyectos adjudicados por instrumento. 4.9b: Participación relativa sobre adjudicaciones financieras por instrumento y mandato presidencial. Elaboración propia con datos de la base de proyectos adjudicados.' },
+    { number: '4.10', type: 'powerbi', reportSectionId: 'ReportSection9f787217514b282413c9', token: powerBiToken, title: 'Gráfico 4.10. Participación relativa de áreas temáticas e instrumentos en las adjudicaciones financieras de Articulación de la Demanda Estatal (2008-2023)', note: 'Elaboración propia con datos de la base de proyectos adjudicados.' },
+    { number: '4.11', type: 'powerbi', reportSectionId: 'ReportSection12a998e0d90573e3ddd6', token: powerBiToken, title: 'Gráfico 4.11. Consorcios conformados por la red de Articulación de la Demanda Estatal (por año y tipo de consorcio, 2008-2023)', note: 'Elaboración propia con datos de la base de proyectos adjudicados.' },
+    { number: '4.12', type: 'kumu', src: 'https://embed.kumu.io/7b061058b05781d14b86e0384a471769', title: 'Gráfico 4.12. Red de Articulación de la Demanda Estatal (2008-2023)', note: 'Elaboración propia con datos de la base de datos de proyectos adjudicados. Visualización interactiva disponible en: https://kumu.io/andcar/pruebasadj#est5' },
+    { number: '4.13', type: 'image', src: '/cap4_images/chart_4_13.png', title: 'Gráfico 4.13. Red de Articulación de la Demanda Estatal destacada por adjudicación durante cada mandato presidencial (2008-2015)', note: '4.13a: Adjudicaciones 2008-2011. 4.13b: Adjudicaciones 2012-2015. Elaboración propia con datos de la base de datos de proyectos adjudicados. Visualización interactiva disponible en: https://kumu.io/andcar/pruebasadj#est5' },
+    { number: '4.14', type: 'image', src: '/cap4_images/chart_4_14.png', title: 'Gráfico 4.14. Red de Articulación de la Demanda Estatal destacada por adjudicación durante cada mandato presidencial (2016-2023)', note: '4.14a: Adjudicaciones 2016-2019. 4.14b: Adjudicaciones 2020-2023. Elaboración propia con datos de la base de datos de proyectos adjudicados. Visualización interactiva disponible en: https://kumu.io/andcar/pruebasadj#est5' },
+    { number: '4.15', type: 'image', src: '/cap4_images/chart_4_15.png', title: 'Gráfico 4.15. Red de Articulación de la Demanda Estatal destacada por instrumentos adjudicados, paradigma poscompetitivo (2008-2023)', note: 'Elaboración propia con datos de la base de datos de proyectos adjudicados. Visualización interactiva disponible en: https://kumu.io/andcar/pruebasadj#est5' },
+    { number: '4.16', type: 'image', src: '/cap4_images/chart_4_16.png', title: 'Gráfico 4.16. Red de Articulación de la Demanda Estatal destacada por instrumentos adjudicados, paradigma competitivo (2008-2023)', note: 'Elaboración propia con datos de la base de datos de proyectos adjudicados. Visualización interactiva disponible en: https://kumu.io/andcar/pruebasadj#est5' },
+    { number: '4.17', type: 'powerbi', reportSectionId: 'ReportSection4fe984c4490c891355e2', token: powerBiToken, title: 'Gráfico 4.17. Panel de participación relativa en adjudicaciones por instrumento', note: '4.17a: Cantidad de proyectos adjudicados por instrumento. 4.17b: Participación anual relativa sobre adjudicaciones financieras por instrumento (a valores constantes de 2008). Elaboración propia con datos de la base de proyectos adjudicados.' },
+    { number: '4.18', type: 'powerbi', reportSectionId: 'ReportSection6d4fee2125dbb9c0dc0d', token: powerBiToken, title: 'Gráfico 4.18. Participación relativa por área temática y mandato presidencial de las adjudicaciones financieras de Innovación comunitaria y socioinclusiva (2008-2023)', note: 'Elaboración propia con datos de la base de proyectos adjudicados.' },
+    { number: '4.19', type: 'powerbi', reportSectionId: 'ReportSection07a1a9387185d0b8bb90', token: powerBiToken, title: 'Gráfico 4.19. Consorcios conformados por la red de Innovación Comunitaria y Socioinclusiva (2008-2023)', note: 'Elaboración propia con datos de la base de proyectos adjudicados.' },
+    { number: '4.20', type: 'kumu', src: 'https://embed.kumu.io/9c446cc4ec0c44452a6038e77a328594', title: 'Gráfico 4.20. Red de Innovación Comunitaria y Socioinclusiva (2008-2023)', note: 'Elaboración propia con datos de la base de datos de proyectos adjudicados. Visualización interactiva disponible en: https://kumu.io/andcar/pruebasadj#com5' },
+    { number: '4.21', type: 'image', src: '/cap4_images/chart_4_21.png', title: 'Gráfico 4.21. Red de Innovación Comunitaria y Socioinclusiva destacada por adjudicación durante cada mandato presidencial (2008-2015)', note: '4.21a: Adjudicaciones 2008-2011. 4.21b: Adjudicaciones 2012-2015. Elaboración propia con datos de la base de datos de proyectos adjudicados. Visualización interactiva disponible en: https://kumu.io/andcar/pruebasadj#com5' },
+    { number: '4.22', type: 'image', src: '/cap4_images/chart_4_22.png', title: 'Gráfico 4.22. Red de Innovación Comunitaria y Socioinclusiva destacada por adjudicación durante cada mandato presidencial (2016-2023)', note: '4.22a: Adjudicaciones 2016-2019. 4.22b: Adjudicaciones 2020-2023. Elaboración propia con datos de la base de datos de proyectos adjudicados. Visualización interactiva disponible en: https://kumu.io/andcar/pruebasadj#com5' },
+    { number: '4.23', type: 'image', src: '/cap4_images/chart_4_23.png', title: 'Gráfico 4.23. Red de Innovación Comunitaria y Socioinclusiva destacada por área temática (Desarrollo productivo; Ambiente y hábitat social, 2008-2023)', note: 'Elaboración propia con datos de la base de datos de proyectos adjudicados. Visualización interactiva disponible en: https://kumu.io/andcar/pruebasadj#com5' },
+    { number: '4.24', type: 'image', src: '/cap4_images/chart_4_24.png', title: 'Gráfico 4.24. Red de Innovación Comunitaria y Socioinclusiva destacada por área temática (Agricultura familiar; Salud y discapacidad, 2008-2023)', note: 'Elaboración propia con datos de la base de datos de proyectos adjudicados. Visualización interactiva disponible en: https://kumu.io/andcar/pruebasadj#com5' },
+    { number: '4.25', type: 'powerbi', reportSectionId: 'ReportSection6860188c54a4e0dfe36d', token: powerBiToken, title: 'Gráfico 4.25. Participación porcentual sobre montos financieros adjudicados a entidades comunitarias, por tipo de entidad y fondo (2008-2023)', note: 'Elaboración propia con datos de la base de proyectos adjudicados. *Estimación en base a la cantidad de entidades involucradas por cada consorcio asociativo. Para más detalles, ver anexo técnico-metodológico.' },
+    { number: '4.26', type: 'powerbi', reportSectionId: 'ReportSection293595c62379bce0c066', token: powerBiToken, title: 'Gráfico 4.26. Participación porcentual sobre montos financieros adjudicados a entidades públicas, por tipo de entidad y fondo (2008-2023)', note: 'Elaboración propia con datos de la base de proyectos adjudicados. *Estimación en base a la cantidad de entidades involucradas por cada consorcio asociativo. Para más detalles, ver anexo técnico-metodológico.' },
+    { number: '4.27', type: 'powerbi', reportSectionId: 'ReportSection001ffbba49bf8f26b4a6', token: powerBiToken, title: 'Gráfico 4.27. Panel de consorcios asociativos por tamaño, según cantidad de proyectos y de montos financieros adjudicados (2008-2023)', note: '4.27a: Cantidad de proyectos adjudicados por tipo de consorcio y cantidad de integrantes. 4.27b: Adjudicaciones financieras por tipo de consorcio y cantidad de integrantes (a valores constantes de 2008). Elaboración propia con datos de la base de proyectos adjudicados.' },
+    { number: '4.28', type: 'kumu', src: 'https://embed.kumu.io/bb00d433a92811344ab0f3b452da18cf', title: 'Gráfico 4.28. Red común a los tres senderos asociativos (2008-2023)', note: 'Elaboración propia con datos de la base de datos de proyectos adjudicados. Visualización interactiva disponible en: https://kumu.io/andcar/pruebasadj#tot5' },
+    { number: '4.29', type: 'kumu', src: 'https://embed.kumu.io/fb536029938812d272deb2af93f57fed', title: 'Gráfico 4.29. Red común a los tres senderos asociativos, por comunidad (2008-2023)', note: 'Elaboración propia con datos de la base de datos de proyectos adjudicados. Visualización interactiva disponible en: https://kumu.io/andcar/pruebasadj#tot5/colorcom' }
   ];
 
   const handleBack = () => {
-    window.location.href = '/mincyt';
+    // noop, replaced below when router is initialized
   };
 
   const handlePrev = () => {
-    window.location.href = '/mincyt/cap3';
+    // noop, replaced below when router is initialized
   }
+
+  const router = useRouter();
+
+  const _handleBack = () => router.push('/');
+  const _handlePrev = () => router.push('/cap3');
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-teal-50 via-cyan-50 to-white">
@@ -273,7 +64,7 @@ export default function Cap4Page() {
             <p className="text-teal-100">Redes asociativas movilizadas</p>
           </div>
           <button
-            onClick={handleBack}
+            onClick={_handleBack}
             className="bg-teal-700 hover:bg-teal-800 px-6 py-2 rounded-lg font-semibold transition"
           >
             ↑ Inicio
@@ -339,7 +130,7 @@ export default function Cap4Page() {
                 )}
                 {chart.type === 'image' && (
                   <img
-                    src={chart.src}
+                    src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}${chart.src}`}
                     alt={`Gráfico ${chart.number}`}
                     className="w-full h-auto rounded-lg"
                   />
@@ -362,13 +153,13 @@ export default function Cap4Page() {
         {/* Navegación */}
         <div className="mt-16 flex justify-between items-center">
           <button
-            onClick={handlePrev}
+            onClick={_handlePrev}
             className="bg-teal-600 hover:bg-teal-700 text-white px-6 py-3 rounded-lg font-semibold transition flex items-center gap-2"
           >
             ← Capítulo 3
           </button>
           <button
-            onClick={handleBack}
+            onClick={_handleBack}
             className="bg-gray-600 hover:bg-gray-700 text-white px-6 py-3 rounded-lg font-semibold transition"
           >
             ↑ Inicio

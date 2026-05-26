@@ -66,16 +66,16 @@ export default function HomePage() {
                    
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center flex-wrap">
-              <Link href="/mincyt/cap1" className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors">
+              <Link href="/cap1" className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors">
                 Capítulo 1
               </Link>
-              <Link href="/mincyt/cap2" className="inline-block bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors">
+              <Link href="/cap2" className="inline-block bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors">
                 Capítulo 2
               </Link>
-              <Link href="/mincyt/cap3" className="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors">
+              <Link href="/cap3" className="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors">
                 Capítulo 3
               </Link>
-              <Link href="/mincyt/cap4" className="inline-block bg-teal-600 hover:bg-teal-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors">
+              <Link href="/cap4" className="inline-block bg-teal-600 hover:bg-teal-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors">
                 Capítulo 4
               </Link>
             </div>
@@ -109,7 +109,7 @@ export default function HomePage() {
                   </p>
                   
                   <Link
-                    href={`/mincyt/${chapter.id}`}
+                    href={`/${chapter.id}`}
                     className={`inline-block ${chapter.themeButton} text-white font-semibold py-2 px-6 rounded-lg transition-colors`}
                   >
                     Explorar {chapter.id.toUpperCase()}
@@ -195,7 +195,7 @@ export default function HomePage() {
               ¿Listo para explorar los datos?
             </h2>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/mincyt/cap1" className="inline-block bg-white hover:bg-gray-100 text-blue-600 font-semibold py-3 px-8 rounded-lg transition-colors">
+              <Link href="/cap1" className="inline-block bg-white hover:bg-gray-100 text-blue-600 font-semibold py-3 px-8 rounded-lg transition-colors">
                 Empezar por el Capítulo 1
               </Link>
               <a

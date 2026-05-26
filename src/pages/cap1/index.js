@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import CAREMChart from '/mincyt/components/CAREMChart';
+import { useRouter } from 'next/router';
+import CAREMChart from '../../components/CAREMChart';
 
 export default function Cap1Page() {
   const [charts, setCharts] = useState({});
@@ -16,7 +17,7 @@ export default function Cap1Page() {
 
         const chartsData = {};
         for (const id of chartIds) {
-          const res = await fetch(`/data/${id}.json`);
+          const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/data/${id}.json`);
           if (res.ok) {
             chartsData[id] = await res.json();
           }
@@ -32,12 +33,14 @@ export default function Cap1Page() {
     loadCharts();
   }, []);
 
+  const router = useRouter();
+
   const handleBack = () => {
-    window.location.href = '/mincyt';
+    router.push('/');
   };
 
   const handleNext = () => {
-    window.location.href = '/mincyt/cap2';
+    router.push('/cap2');
   };
 
   if (loading) {
@@ -85,7 +88,7 @@ export default function Cap1Page() {
           {/* Chart 1.1 - Diagrama del sistema */}
           <section className="bg-white rounded-lg shadow-md p-6">
             <img 
-              src="/mincyt/public/Gráfico 1.1.jpg" 
+              src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/Gráfico 1.1.jpg`} 
               alt="Diagrama del sistema nacional en Ciencia y Tecnología de 2007"
               className="w-full h-auto mb-4 rounded"
             />

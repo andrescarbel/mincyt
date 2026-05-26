@@ -1,4 +1,5 @@
 import SimpleLineChart from '../../components/SimpleLineChart';
+import { useRouter } from 'next/router';
 
 export default function Cap2Page() {
   const powerBiToken = 'eyJrIjoiZDU2ZjBkZjEtMmMzYy00N2QwLWFlNTAtYjc4NWY1YzRmNGVmIiwidCI6ImYyMTMzNGIwLTc1ZGUtNDY0MS04ZTU5LTNjMGU1YTdhYjc1MyIsImMiOjR9';
@@ -38,7 +39,7 @@ export default function Cap2Page() {
     {
       number: '2.1',
       type: 'image',
-      src: '/mincyt/public/Grafico_2_1.png',
+      src: '/Grafico_2_1.png',
       title: 'Organigrama funcional de la estructura centralizada de la SECyT (2002-2007) y el MINCyT (2007-2023)',
       note: 'En tonos de azules las incorporaciones y jerarquizaciones de áreas de gestión, en tonos de grises las áreas sin cambios entre etapas. Elaboración propia en base a Boletín Oficial e Infoleg.'
     },
@@ -70,7 +71,7 @@ export default function Cap2Page() {
     {
       number: '2.4',
       type: 'image',
-      src: '/mincyt/public/Grafico_2_4.jpg',
+      src: '/Grafico_2_4.jpg',
       title: 'Formulación de demandas de conocimiento en los planes sectoriales de ciencia y tecnología (2003-2023)',
       note: 'Elaboración propia en base a SECyT, 2006 y MINCyT 2012 y 2022.'
     },
@@ -124,16 +125,18 @@ export default function Cap2Page() {
     }
   ];
 
+  const router = useRouter();
+
   const handleBack = () => {
-    window.location.href = '/mincyt';
+    router.push('/');
   };
 
   const handlePrev = () => {
-    window.location.href = '/mincyt/cap1';
+    router.push('/cap1');
   };
 
   const handleNext = () => {
-    window.location.href = '/mincyt/cap3';
+    router.push('/cap3');
   };
 
   return (
@@ -201,7 +204,7 @@ export default function Cap2Page() {
                 ) : (
                   <div className="w-full">
                     <img
-                      src={chart.src}
+                      src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}${chart.src}`}
                       alt={chart.title}
                       className="w-full h-auto rounded-lg shadow-sm"
                     />
