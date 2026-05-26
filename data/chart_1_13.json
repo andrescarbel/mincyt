@@ -1,0 +1,19 @@
+[
+  { "year": "2007", "acumulado": 0.67, "anual": 0.67 },
+  { "year": "2008", "acumulado": 1.72, "anual": 1.05 },
+  { "year": "2009", "acumulado": 6.72, "anual": 5.0 },
+  { "year": "2010", "acumulado": 11.62, "anual": 4.9 },
+  { "year": "2011", "acumulado": 16.17, "anual": 4.5 },
+  { "year": "2012", "acumulado": 18.92, "anual": 2.75 },
+  { "year": "2013", "acumulado": 25.41, "anual": 6.49 },
+  { "year": "2014", "acumulado": 30.63, "anual": 5.22 },
+  { "year": "2015", "acumulado": 34.34, "anual": 3.71 },
+  { "year": "2016", "acumulado": 38.64, "anual": 4.3 },
+  { "year": "2017", "acumulado": 46.03, "anual": 7.39 },
+  { "year": "2018", "acumulado": 54.5, "anual": 8.47 },
+  { "year": "2019", "acumulado": 57.89, "anual": 0.46 },
+  { "year": "2020", "acumulado": 58.94, "anual": 1.05 },
+  { "year": "2021", "acumulado": 59.79, "anual": 0.85 },
+  { "year": "2022", "acumulado": 61.59, "anual": 1.8 },
+  { "year": "2023", "acumulado": 63.28, "anual": 1.69 }
+]
