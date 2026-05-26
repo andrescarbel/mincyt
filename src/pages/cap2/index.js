@@ -38,7 +38,7 @@ export default function Cap2Page() {
     {
       number: '2.1',
       type: 'image',
-      src: '/Grafico_2_1.png',
+      src: '/mincyt/public/Grafico_2_1.png',
       title: 'Organigrama funcional de la estructura centralizada de la SECyT (2002-2007) y el MINCyT (2007-2023)',
       note: 'En tonos de azules las incorporaciones y jerarquizaciones de áreas de gestión, en tonos de grises las áreas sin cambios entre etapas. Elaboración propia en base a Boletín Oficial e Infoleg.'
     },
@@ -70,7 +70,7 @@ export default function Cap2Page() {
     {
       number: '2.4',
       type: 'image',
-      src: '/Grafico_2_4.jpg',
+      src: '/mincyt/public/Grafico_2_4.jpg',
       title: 'Formulación de demandas de conocimiento en los planes sectoriales de ciencia y tecnología (2003-2023)',
       note: 'Elaboración propia en base a SECyT, 2006 y MINCyT 2012 y 2022.'
     },
@@ -125,15 +125,15 @@ export default function Cap2Page() {
   ];
 
   const handleBack = () => {
-    window.location.href = '/';
+    window.location.href = '/mincyt';
   };
 
   const handlePrev = () => {
-    window.location.href = '/cap1';
+    window.location.href = '/mincyt/cap1';
   };
 
   const handleNext = () => {
-    window.location.href = '/cap3';
+    window.location.href = '/mincyt/cap3';
   };
 
   return (
@@ -256,7 +256,7 @@ export default function Cap2Page() {
       {/* Footer */}
       <footer className="bg-gray-100 mt-16 py-8 border-t border-gray-200">
         <div className="mt-16 pt-8 border-t border-gray-200 text-center text-gray-500">
-          <p>Capítulo 3: Instrumentos de promoción orientada</p>
+          <p>Capítulo 2: Apuestas y agenda del MINCyT</p>
           <p className="text-sm mt-2">
             Políticas orientadas: El MINCYT y su estrategia para promover el desarrollo nacional (2007-2023)
           </p>

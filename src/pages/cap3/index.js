@@ -5,7 +5,7 @@ export default function Cap3Page() {
     {
       number: '3.1',
       type: 'image',
-      src: '/Grafico_3_1.jpg',
+      src: '/mincyt/public/Grafico_3_1.jpg',
       title: 'Esquema general de instrumentos de promoción orientada CTI gestionados por el MINCyT a través de la Agencia y otras dependencias (2008-2023)',
       note: 'Elaboración propia.'
     },
@@ -60,15 +60,15 @@ export default function Cap3Page() {
   ];
 
   const handleBack = () => {
-    window.location.href = '/';
+    window.location.href = '/mincyt';
   };
 
   const handlePrev = () => {
-    window.location.href = '/cap2';
+    window.location.href = '/mincyt/cap2';
   };
 
   const handleNext = () => {
-    window.location.href = '/cap4';
+    window.location.href = '/mincyt/cap4';
   };
 
   return (

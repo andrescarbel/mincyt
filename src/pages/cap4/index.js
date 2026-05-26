@@ -48,7 +48,7 @@ export default function Cap4Page() {
     {
       number: '4.5',
       type: 'image',
-      src: '/cap4_images/chart_4_5.png',
+      src: '/mincyt/public/cap4_images/chart_4_5.png',
       title: 'Gráfico 4.5. Red de Asociatividad Público-Privada, destacadas organizaciones estatales y privadas (2008-2023)',
       note: '4.5a: Entidades estatales destacadas. 4.5b: Entidades privadas destacadas. Elaboración propia con datos de la base de datos de proyectos adjudicados. Visualización interactiva disponible en: https://kumu.io/andcar/pruebasadj#fon5/fon5tam'
     },
@@ -56,7 +56,7 @@ export default function Cap4Page() {
     {
       number: '4.6',
       type: 'image',
-      src: '/cap4_images/chart_4_6.png',
+      src: '/mincyt/public/cap4_images/chart_4_6.png',
       title: 'Gráfico 4.6. Red de Asociatividad Público-Privada destacada por adjudicación durante cada mandato presidencial (2008-2015)',
       note: '4.6a: Adjudicaciones 2008-2011. 4.6b: Adjudicaciones 2012-2015. Elaboración propia con datos de la base de datos de proyectos adjudicados. Visualización interactiva disponible en: https://kumu.io/andcar/pruebasadj#fon5/fon5tam'
     },
@@ -64,7 +64,7 @@ export default function Cap4Page() {
     {
       number: '4.7',
       type: 'image',
-      src: '/cap4_images/chart_4_7.png',
+      src: '/mincyt/public/cap4_images/chart_4_7.png',
       title: 'Gráfico 4.7. Red de Asociatividad Público-Privada destacada por adjudicación durante cada mandato presidencial (2016-2023)',
       note: '4.7a: Adjudicaciones 2016-2019. 4.7b: Adjudicaciones 2020-2023. Elaboración propia con datos de la base de datos de proyectos adjudicados. Visualización interactiva disponible en: https://kumu.io/andcar/pruebasadj#fon5/fon5tam'
     },
@@ -72,7 +72,7 @@ export default function Cap4Page() {
     {
       number: '4.8',
       type: 'image',
-      src: '/cap4_images/chart_4_8.png',
+      src: '/mincyt/public/cap4_images/chart_4_8.png',
       title: 'Gráfico 4.8. Red de Asociatividad Público-Privada destacada por área temática (2008-2023)',
       note: 'Elaboración propia con datos de la base de datos de proyectos adjudicados. Visualización interactiva disponible en: https://kumu.io/andcar/pruebasadj#fon5/fon5tam'
     },
@@ -115,7 +115,7 @@ export default function Cap4Page() {
     {
       number: '4.13',
       type: 'image',
-      src: '/cap4_images/chart_4_13.png',
+      src: '/mincyt/public/cap4_images/chart_4_13.png',
       title: 'Gráfico 4.13. Red de Articulación de la Demanda Estatal destacada por adjudicación durante cada mandato presidencial (2008-2015)',
       note: '4.13a: Adjudicaciones 2008-2011. 4.13b: Adjudicaciones 2012-2015. Elaboración propia con datos de la base de datos de proyectos adjudicados. Visualización interactiva disponible en: https://kumu.io/andcar/pruebasadj#est5'
     },
@@ -123,7 +123,7 @@ export default function Cap4Page() {
     {
       number: '4.14',
       type: 'image',
-      src: '/cap4_images/chart_4_14.png',
+      src: '/mincyt/public/cap4_images/chart_4_14.png',
       title: 'Gráfico 4.14. Red de Articulación de la Demanda Estatal destacada por adjudicación durante cada mandato presidencial (2016-2023)',
       note: '4.14a: Adjudicaciones 2016-2019. 4.14b: Adjudicaciones 2020-2023. Elaboración propia con datos de la base de datos de proyectos adjudicados. Visualización interactiva disponible en: https://kumu.io/andcar/pruebasadj#est5'
     },
@@ -131,7 +131,7 @@ export default function Cap4Page() {
     {
       number: '4.15',
       type: 'image',
-      src: '/cap4_images/chart_4_15.png',
+      src: '/mincyt/public/cap4_images/chart_4_15.png',
       title: 'Gráfico 4.15. Red de Articulación de la Demanda Estatal destacada por instrumentos adjudicados, paradigma poscompetitivo (2008-2023)',
       note: 'Elaboración propia con datos de la base de datos de proyectos adjudicados. Visualización interactiva disponible en: https://kumu.io/andcar/pruebasadj#est5'
     },
@@ -139,7 +139,7 @@ export default function Cap4Page() {
     {
       number: '4.16',
       type: 'image',
-      src: '/cap4_images/chart_4_16.png',
+      src: '/mincyt/public/cap4_images/chart_4_16.png',
       title: 'Gráfico 4.16. Red de Articulación de la Demanda Estatal destacada por instrumentos adjudicados, paradigma competitivo (2008-2023)',
       note: 'Elaboración propia con datos de la base de datos de proyectos adjudicados. Visualización interactiva disponible en: https://kumu.io/andcar/pruebasadj#est5'
     },
@@ -182,7 +182,7 @@ export default function Cap4Page() {
     {
       number: '4.21',
       type: 'image',
-      src: '/cap4_images/chart_4_21.png',
+      src: '/mincyt/public/cap4_images/chart_4_21.png',
       title: 'Gráfico 4.21. Red de Innovación Comunitaria y Socioinclusiva destacada por adjudicación durante cada mandato presidencial (2008-2015)',
       note: '4.21a: Adjudicaciones 2008-2011. 4.21b: Adjudicaciones 2012-2015. Elaboración propia con datos de la base de datos de proyectos adjudicados. Visualización interactiva disponible en: https://kumu.io/andcar/pruebasadj#com5'
     },
@@ -190,7 +190,7 @@ export default function Cap4Page() {
     {
       number: '4.22',
       type: 'image',
-      src: '/cap4_images/chart_4_22.png',
+      src: '/mincyt/public/cap4_images/chart_4_22.png',
       title: 'Gráfico 4.22. Red de Innovación Comunitaria y Socioinclusiva destacada por adjudicación durante cada mandato presidencial (2016-2023)',
       note: '4.22a: Adjudicaciones 2016-2019. 4.22b: Adjudicaciones 2020-2023. Elaboración propia con datos de la base de datos de proyectos adjudicados. Visualización interactiva disponible en: https://kumu.io/andcar/pruebasadj#com5'
     },
@@ -198,7 +198,7 @@ export default function Cap4Page() {
     {
       number: '4.23',
       type: 'image',
-      src: '/cap4_images/chart_4_23.png',
+      src: '/mincyt/public/cap4_images/chart_4_23.png',
       title: 'Gráfico 4.23. Red de Innovación Comunitaria y Socioinclusiva destacada por área temática (Desarrollo productivo; Ambiente y hábitat social, 2008-2023)',
       note: 'Elaboración propia con datos de la base de datos de proyectos adjudicados. Visualización interactiva disponible en: https://kumu.io/andcar/pruebasadj#com5'
     },
@@ -206,7 +206,7 @@ export default function Cap4Page() {
     {
       number: '4.24',
       type: 'image',
-      src: '/cap4_images/chart_4_24.png',
+      src: '/mincyt/public/cap4_images/chart_4_24.png',
       title: 'Gráfico 4.24. Red de Innovación Comunitaria y Socioinclusiva destacada por área temática (Agricultura familiar; Salud y discapacidad, 2008-2023)',
       note: 'Elaboración propia con datos de la base de datos de proyectos adjudicados. Visualización interactiva disponible en: https://kumu.io/andcar/pruebasadj#com5'
     },
@@ -256,11 +256,11 @@ export default function Cap4Page() {
   ];
 
   const handleBack = () => {
-    window.location.href = '/';
+    window.location.href = '/mincyt';
   };
 
   const handlePrev = () => {
-    window.location.href = '/cap3';
+    window.location.href = '/mincyt/cap3';
   }
 
   return (
