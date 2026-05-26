@@ -15,7 +15,7 @@ https://andrescarbel.github.io/mincyt/
 **Autor**: Andrés Carbel  
 **Tesis**: Políticas orientadas: El MINCYT y su estrategia para promover el desarrollo nacional (2007-2023)  
 
-El sitio se publica desde la branch `GH-PAGES`. El workflow de GitHub Actions solo construye el sitio y actualiza esa branch de publicación.
+El sitio se publica desde la branch `SITIOMINCYT`. El workflow de GitHub Actions solo construye el sitio y actualiza esa branch de publicación.
 
 ## Repositorios
 

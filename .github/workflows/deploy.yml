@@ -21,9 +21,9 @@ jobs:
       - run: npm install
       - run: npm run build
       
-      - name: Deploy to GH-PAGES branch
+      - name: Deploy to SITIOMINCYT branch
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: GH-PAGES
+          publish_branch: SITIOMINCYT
           publish_dir: ./out
