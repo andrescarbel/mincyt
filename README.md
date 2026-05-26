@@ -8,14 +8,14 @@ Los datasets permitieron gestionar gran cantidad de datos, analizar minuciosamen
 
 ## Sitio Web Online
 
-El sitio se publica desde la branch `GH-PAGES` y se accede en:
-
+**Se accede al sitio web con los gráficos interativos en:**
 https://andrescarbel.github.io/mincyt/
 
-El workflow de GitHub Actions solo construye el sitio y actualiza esa branch de publicación.
+*Tesis en evaluación*
 **Autor**: Andrés Carbel  
 **Tesis**: Políticas orientadas: El MINCYT y su estrategia para promover el desarrollo nacional (2007-2023)  
-*Tesis en evaluación*
+
+El sitio se publica desde la branch `GH-PAGES`. El workflow de GitHub Actions solo construye el sitio y actualiza esa branch de publicación.
 
 ## Repositorios
 
